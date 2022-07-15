@@ -22,6 +22,8 @@ Therefore, the following will NOT work:
 
     <main>
     <h1 :class="headingClass">this should be red</h1>
+    <!-- Inline Handlers -->
+    <!-- for more info about events ->> https://vuejs.org/guide/essentials/event-handling.html#listening-to-events -->
     <button @click="increment">Count: {{ count }}</button>
 
     </main>
@@ -49,6 +51,7 @@ main{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 .classDiv{
     color:red;
