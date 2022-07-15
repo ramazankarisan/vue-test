@@ -1,0 +1,64 @@
+<template>
+  <main>
+   <h1>Computed Property</h1>
+  
+  <form @submit.prevent="addTodo">
+    <input v-model="newTodo" />
+    <button>Add Todo</button>
+  </form>
+  <ul>
+    <li v-for="todo in filteredTodos" :key="todo.id">
+      <input type="checkbox" v-model="todo.done">
+      <span :class="{ done: todo.done }">{{ todo.text }}</span>
+      <button @click="removeTodo(todo)">X</button>
+    </li>
+  </ul>
+  <button @click="hideCompleted = !hideCompleted">
+    {{ hideCompleted ? 'Show all' : 'Hide completed' }}
+  </button>
+  </main>
+</template>
+
+<script setup>
+import { ref, computed } from 'vue'
+
+let id = 0
+
+const newTodo = ref('')
+const hideCompleted = ref(false)
+const todos = ref([
+  { id: id++, text: 'Learn HTML', done: true },
+  { id: id++, text: 'Learn JavaScript', done: true },
+  { id: id++, text: 'Learn Vue', done: false }
+])
+
+const filteredTodos = computed(() => {
+  return hideCompleted.value
+    ? todos.value.filter((t) => !t.done)
+    : todos.value
+})
+
+function addTodo() {
+  todos.value.push({ id: id++, text: newTodo.value, done: false })
+  newTodo.value = ''
+}
+
+function removeTodo(todo) {
+  todos.value = todos.value.filter((t) => t !== todo)
+}
+</script>
+<style scoped>
+main {
+  background-color: rgb(125, 146, 154);
+  color: black;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.done {
+  text-decoration: line-through;
+}
+</style>
