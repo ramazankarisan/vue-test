@@ -21,6 +21,7 @@ Therefore, the following will NOT work:
 
 
     <main>
+    <h1>Attribute Bindings</h1>
     <h1 :class="headingClass">this should be red</h1>
     <!-- Inline Handlers -->
     <!-- for more info about events ->> https://vuejs.org/guide/essentials/event-handling.html#listening-to-events -->
@@ -46,7 +47,6 @@ main{
     background-color: rgb(142, 129, 129);
     color:black;
     width: 100%;
-    height: 30vh;
       display: flex;
   flex-direction: column;
   justify-content: center;

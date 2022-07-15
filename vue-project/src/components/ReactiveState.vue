@@ -1,6 +1,6 @@
 <template>
     <main>
-  
+  <h1>reactive State</h1>
   <!-- <h1>{{ message }}</h1>
   <p>Count is: {{ counter.count }}</p> -->
 
@@ -82,7 +82,6 @@ main{
     background-color: gray;
     color:black;
     width: 100%;
-    height: 30vh;
       display: flex;
   flex-direction: column;
   justify-content: center;

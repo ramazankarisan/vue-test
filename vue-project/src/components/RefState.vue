@@ -1,5 +1,6 @@
 <template>
     <main>
+    <h1>Ref State</h1>
     <h1> count:{{count}}</h1>
     <h1> foo:{{foo}}</h1>
     <h1> bar:{{bar}}</h1>
@@ -39,7 +40,6 @@ main{
     background-color: rgb(205, 203, 203);
     color:black;
     width: 100%;
-    height: 30vh;
       display: flex;
   flex-direction: column;
   justify-content: center;

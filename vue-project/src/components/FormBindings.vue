@@ -1,5 +1,6 @@
 <template>
     <main>
+    <h1>Form Bindings</h1>
   <!-- <input :value="text" @input="onInput" placeholder="Type here">
 
  <input  :value="text"  @input="event => text = event.target.value">
@@ -32,7 +33,6 @@ main{
     background-color: rgb(185, 170, 170);
     color:black;
     width: 100%;
-    height: 30vh;
       display: flex;
   flex-direction: column;
   justify-content: center;
